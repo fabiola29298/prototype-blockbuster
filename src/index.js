@@ -1,4 +1,4 @@
-import * as CRUD from "./js/crud";
+import {init}  from "./js/autoComplete-page";
 
 
-CRUD.getUsuario (1 ).then( console.log );
+init();

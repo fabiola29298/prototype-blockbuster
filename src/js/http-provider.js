@@ -1,16 +1,27 @@
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
-const urlUsuarios = 'https://reqres.in/api/users?page=2';
+import {Movie} from '../classes';
 
+const mainUrl = 'https://imdb8.p.rapidapi.com';
+const rapidapiKey = '9c44151135mshaa63d7abf854a97p155e45jsn829d3a291c8e';
+const rapidapiHost = 'imdb8.p.rapidapi.com';
 
-const obtenerChiste = async () => {
-
+const getAutoComplete = async (search) => {
 
   try{
-    const resp = await fetch(jokeUrl);
-    if (!resp.ok) throw 'No se pudo realizar la peticion';
-    const { icon_url, id, value } = await resp.json();
-
-    return { icon_url, id, value };
+    const resp = await fetch(`${mainUrl}/auto-complete?q=${search}`,{
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": rapidapiKey,
+        "x-rapidapi-host": rapidapiHost
+      }
+    });
+    if (!resp.ok) throw 'The request could not be fulfilled';
+    const {d: data} = await resp.json();
+    let movieList =[];
+    data.forEach(resp => {
+      let movieNew = new Movie(resp.id, resp.l, resp.q, resp.rank, resp.i.imageUrl, resp.y);
+      movieList.push(movieNew);
+    });
+    return movieList;
 
   }catch(err){
       throw err;
@@ -18,15 +29,7 @@ const obtenerChiste = async () => {
   }
 }
 
-const obtenerUsuarios = async() => {
-  const resp = await fetch (urlUsuarios);
-  const { data: usuarios } = await resp.json();
-
-  return usuarios;
-}
-
 
 export {
-  obtenerChiste,
-  obtenerUsuarios
+  getAutoComplete
 }
