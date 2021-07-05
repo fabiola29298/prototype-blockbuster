@@ -1,11 +1,11 @@
-import { getMostPopularMovies } from "./http-provider";
+import { getTopCrew } from "./http-provider";
 
 const body = document.body;
 let btnSearch, olList  ;
 
 const createMovieListHtml = () => {
   const html = `
-   <h1 class="mt-5">Most Popular Movies </h1>
+   <h1 class="mt-5">others </h1>
 
    <hr>
   <button class="btn btn-primary"> Search </button>
@@ -25,7 +25,7 @@ const eventsSearch = () => {
 
     btnSearch.disabled = true;
     // let movies = [];
-    let movies = await getMostPopularMovies(0);
+    let movies = await getTopCrew(50);
     createMovieHtml(movies);
     btnSearch.disabled = false;
 

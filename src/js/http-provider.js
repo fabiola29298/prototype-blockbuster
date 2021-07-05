@@ -14,8 +14,9 @@ const _getMovieByID = async (id) =>{
         "x-rapidapi-host": rapidapiHost
       }
     });
-    if (!resp.ok) throw 'The request could not be fulfilled';
+    if (!resp.ok) throw {type: 'err'};
     let {resource: data} = await resp.json();
+    console.log(data);
     return new Movie (data.id, data.title, data.titleType, data.size, data.image.url, data.year);
 
   } catch (err) {
@@ -82,10 +83,10 @@ const getMostPopularMovies = async (firstId) => {
 
   }
 }
-const getTopCrew = async (search) => {
+const getTopCrew = async (firstId) => {
 
   try {
-    const resp = await fetch(`${mainUrl}/title/get-top-crew?tconst=tt0944947`, {
+    const resp = await fetch(`${mainUrl}/title/get-popular-movies-by-genre?genre=%2Fchart%2Fpopular%2Fgenre%2Fadventure`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": rapidapiKey,
@@ -93,13 +94,16 @@ const getTopCrew = async (search) => {
       }
     });
     if (!resp.ok) throw 'The request could not be fulfilled';
-    const { d: data } = await resp.json();
-    let movieList = [];
-    data.forEach(resp => {
-      let movieNew = new Movie(resp.id, resp.l, resp.q, resp.rank, resp.i.imageUrl, resp.y);
-      movieList.push(movieNew);
+    let data = await resp.json();
+    data = data.slice(firstId, firstId + 5);
+    // delete /title/ and /
+    data = data.map(function (id) {
+      id = id.replace('/title/', '');
+      id = id.replace('/', '');
+      return id;
     });
-    return movieList;
+
+    return await _getMoviesByIDList(data);
 
   } catch (err) {
     throw err;
