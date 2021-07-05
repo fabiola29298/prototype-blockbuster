@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/index.css">
+     -->
+    <!-- <link type="text/css" href="./css/index.css" > -->
+    <link type="text/css" href="./styles.css" >
     <title>Block Master</title>
     <link rel="icon" type="image/svg"
         href="https://cdn.iconscout.com/icon/free/png-512/blockbuster-285260.png" />
@@ -17,9 +19,29 @@
     <meta property="og:description" content="Prototipo de Spotify diseñado con HTML, CSS y JS." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family= :wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-
+    <header class="logo" role="banner">
+        <a href="https://fabiola29298.github.io/js-blockbuster/" aria-current="page">
+            <img src="./assets/logo-block-buster.png" class="logo-image" width="67" height="40" alt="Logo de Spotifu">
+        </a>
+    </header>
+    <nav class="menu" aria-label="Principal">
+        <ul class="menu-list">
+            <li class="menuItem is-active">
+                <a class="link" href="https://fabiola29298.github.io/prototype-spotify/" aria-current="page">
+                    <i class="icon"  aria-hidden="true"><img src="./assets/search-white.svg" alt=""> </i>
+                    <!-- <span>Home</span> -->
+                </a>
+            </li>
+            <li class="menuItem">
+                <a class="link" href="https://fabiola29298.github.io/prototype-spotify/">
+                    <i class="icon" aria-hidden="true"> <img src="./assets/menu.svg" alt=""></i>
+                    <!-- <span>Search</span> -->
+                </a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>

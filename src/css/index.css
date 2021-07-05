@@ -1,11 +1,16 @@
-@import './body.css';
+@import './button-icon.css';
+@import './cover.css';
+@import './header.css';
+@import './info.css';
+@import './input.css';
+@import './movies-cover.css';
 
 :root{
   font-size: 14px;
   --primary: #FED941;
   --white: #FFFFFF;
   --gray: #A7A9BE;
-  --background: #0F0E17;
+  --backgroundColor: #0F0E17;
   --black: #000000;
   --basefontFamily: Montserrat, Helvetica, sans-serif;
   --headline1: bold 2.875rem/3.5rem var(--basefontFamily);
@@ -31,7 +36,7 @@
   }
 }
 .body {
-  background: var(--background);
+  background: var(--backgroundColor);
   color: var(--gray);
   font: var(--baseFont);
   margin: 0;

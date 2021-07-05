@@ -1,4 +1,4 @@
-const HtmlWebPackPlugin       = require('html-webpack-plugin'); 
+const HtmlWebPackPlugin       = require('html-webpack-plugin');
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
