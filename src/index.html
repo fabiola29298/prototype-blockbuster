@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family= :wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="body">
+
     <div class="header">
         <header class="header-logo" role="banner">
             <a href="https://fabiola29298.github.io/js-blockbuster/" aria-current="page">
@@ -31,18 +32,32 @@
         <nav class="menu" aria-label="Principal">
             <div class="menu-list">
                 <div class="menuItem is-active">
-                    <a class="link" href="https://fabiola29298.github.io/prototype-spotify/" aria-current="page">
+                    <a class="link" id="bar-toggle"   aria-current="page">
                         <i class="icon"  aria-hidden="true"><img src="./assets/search-white.svg"  height="24" width="24" alt=""> </i>
                     </a>
                 </div>
                 <div class="menuItem">
-                    <a class="link" href="https://fabiola29298.github.io/prototype-spotify/">
+                    <a class="link"  >
                         <i class="icon" aria-hidden="true"> <img src="./assets/menu.svg"   height="24" width="24" alt=""></i>
                     </a>
                 </div>
             </div>
         </nav>
+        <div class="header-search">
+            <form class="search-form" role="search" aria-label="Buscar por canciones, artistas o podcast">
+                <i class="icon-back" id="bar-back"  aria-hidden="true">
+                    <img src="./assets/back.svg" alt="back">
+                </i>
+                <input type="search" placeholder="Search for your favorite movie">
+                <button class="search-button" disabled aria-label="Search" title="Search">
+                    <i class="icon" aria-hidden="true">
+                        <img src="./assets/search-black.svg" alt="">
+                    </i>
+                </button>
+            </form>
+        </div>
     </div>
+
     <div class="section-allMovies">
         <div class="section-banner">
             <div class="slider">
