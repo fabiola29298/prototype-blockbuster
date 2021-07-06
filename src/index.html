@@ -22,26 +22,101 @@
     <link href="https://fonts.googleapis.com/css2?family= :wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-    <header class="logo" role="banner">
-        <a href="https://fabiola29298.github.io/js-blockbuster/" aria-current="page">
-            <img src="./assets/logo-block-buster.png" class="logo-image" width="67" height="40" alt="Logo de Spotifu">
-        </a>
-    </header>
-    <nav class="menu" aria-label="Principal">
-        <ul class="menu-list">
-            <li class="menuItem is-active">
-                <a class="link" href="https://fabiola29298.github.io/prototype-spotify/" aria-current="page">
-                    <i class="icon"  aria-hidden="true"><img src="./assets/search-white.svg" alt=""> </i>
-                    <!-- <span>Home</span> -->
-                </a>
-            </li>
-            <li class="menuItem">
-                <a class="link" href="https://fabiola29298.github.io/prototype-spotify/">
-                    <i class="icon" aria-hidden="true"> <img src="./assets/menu.svg" alt=""></i>
-                    <!-- <span>Search</span> -->
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div class="header">
+        <header class="header-logo" role="banner">
+            <a href="https://fabiola29298.github.io/js-blockbuster/" aria-current="page">
+                <img src="./assets/logo-block-buster.png" class="logo-image" width="67" height="40" alt="Logo de Spotifu">
+            </a>
+        </header>
+        <nav class="menu" aria-label="Principal">
+            <div class="menu-list">
+                <div class="menuItem is-active">
+                    <a class="link" href="https://fabiola29298.github.io/prototype-spotify/" aria-current="page">
+                        <i class="icon"  aria-hidden="true"><img src="./assets/search-white.svg"  height="24" width="24" alt=""> </i>
+                    </a>
+                </div>
+                <div class="menuItem">
+                    <a class="link" href="https://fabiola29298.github.io/prototype-spotify/">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/menu.svg"   height="24" width="24" alt=""></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="section-allMovies">
+        <div class="section-banner">
+            <div class="slider">
+                <scroll-container class="slider-container">
+                    <scroll-page class="slider-slide" id="teaser-1">
+                        <img src="./assets/mulan.png" width="328" height="84" alt="Mulan Trailer">
+                    </scroll-page>
+                    <scroll-page class="slider-slide" id="teaser-2">
+                        <img src="./assets/raya.png" width="328" height="84" alt="Mulan Trailer">
+                    </scroll-page>
+                    <scroll-page class="slider-slide" id="teaser-3">
+                        <img src="./assets/unidos.png" width="328" height="84" alt="Mulan Trailer">
+                    </scroll-page>
+                </scroll-container>
+                <div class="slider-bullet-list">
+                    <a href="#teaser-1" class="slider-bullet"></a>
+                    <a href="#teaser-2" class="slider-bullet"></a>
+                    <a href="#teaser-3" class="slider-bullet"></a>
+                </div>
+            </div>
+        </div>
+        <div class="movieList">
+            <p class="body2bold">All Movies</p>
+            <div class="movieList-cardList">
+                <!-- <div class="movieList-loading">
+                    <img src="./assets/loader.gif" width="40" height="40" alt="Loading">
+                </div> -->
+                <div class="movieList-card">
+                    <div class="movieList-stars">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/star.svg" alt="Start icon"></i>
+                        <p>7.1</p>
+                    </div>
+                    <div class="movieList-image">
+                        <img src="./assets/Hard Kill.png" width="80" height="120" alt="Hard Kill Poster">
+                    </div>
+                </div>
+                <div class="movieList-card">
+                    <div class="movieList-stars">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/star.svg" alt="Start icon"></i>
+                        <p>7.1</p>
+                    </div>
+                    <div class="movieList-image">
+                        <img src="./assets/Hard Kill.png" width="80" height="120" alt="Hard Kill Poster">
+                    </div>
+                </div>
+                <div class="movieList-card">
+                    <div class="movieList-stars">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/star.svg" alt="Start icon"></i>
+                        <p>7.1</p>
+                    </div>
+                    <div class="movieList-image">
+                        <img src="./assets/Hard Kill.png" width="80" height="120" alt="Hard Kill Poster">
+                    </div>
+                </div>
+                <div class="movieList-card">
+                    <div class="movieList-stars">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/star.svg" alt="Start icon"></i>
+                        <p>7.1</p>
+                    </div>
+                    <div class="movieList-image">
+                        <img src="./assets/Hard Kill.png" width="80" height="120" alt="Hard Kill Poster">
+                    </div>
+                </div>
+                <div class="movieList-card">
+                    <div class="movieList-stars">
+                        <i class="icon" aria-hidden="true"> <img src="./assets/star.svg" alt="Start icon"></i>
+                        <p>7.1</p>
+                    </div>
+                    <div class="movieList-image">
+                        <img src="./assets/Hard Kill.png" width="80" height="120" alt="Hard Kill Poster">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

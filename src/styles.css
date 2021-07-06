@@ -1,9 +1,4 @@
-@import './css/button-icon.css';
-@import './css/cover.css';
-@import './css/header.css';
-@import './css/info.css';
-@import './css/input.css';
-@import './css/movies-cover.css';
+
 
 :root{
   font-size: 14px;
@@ -50,3 +45,105 @@
   color: var(--white);
   text-decoration: underline;
 }
+/*  header */
+.header{
+  display: flex;
+  gap: 1rem;
+  padding-inline-start:1rem;
+  padding-inline-end: 1rem ;
+  padding-block-start: .5rem;
+  padding-block-end: .5rem;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+.menu-list {
+  display: flex;
+  gap: 1rem;
+  padding-inline-start:.5rem;
+  padding-inline-end: .5rem ;
+}
+/*  button */
+/*  cover */
+
+/*  carrusel */
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+.slider-slide img {
+  margin-inline-start: .5rem;
+  margin-inline-end: .2rem;
+  margin-block-start: 1rem;
+  display: inline-block;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  width: 94%;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 8px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 12px;
+  block-size: 12px;
+  background: var(--gray);
+  border-radius: 50%;
+  margin-inline: 8px;
+}
+.slider-bullet-list a:hover{
+  background: var(--white);
+  border-radius: 100%;
+}
+
+/*  movieList */
+.movieList{
+  margin-inline-start: .5rem;
+}
+.body2bold{
+  font: var(--body1Bold);
+  color: var(--white);
+}
+.movieList-cardList{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.movieList-card{
+  position: relative;
+  /* flex: 0 1 150px; */
+}
+.movieList-stars{
+  position: absolute;
+  top: 7%;
+  display: inline;
+  text-align: start;
+  border: 1px solid var(--primary);
+  border-left: none;
+  padding-block-start: .4rem;
+  padding-block-end: .2rem;
+  padding-inline: .4rem;
+  border-top-right-radius: 12px ;
+  border-bottom-right-radius: 12px ;
+  background: #161414bb;
+
+
+}
+.movieList-stars * img{
+  height: .8rem;
+  width: .8rem;
+}
+.movieList-stars > p{
+  display: inline;
+  font: var(--body1Bold);
+  color: var(--white);
+  line-height: 0;
+}
+/*  input */
+/*  movies-css*/
